@@ -24,7 +24,11 @@
             }
         },
         _widthFromBottom: function(){
-            return 0 + $(document).height() - $(window).scrollTop() - $(window).height();
+            if(this.elem == window){
+                return 0 + $(document).height() - $(window).scrollTop() - $(window).height();
+            }else{
+                return 0 + this.elem.scrollHeight - this.$elem.scrollTop() - this.$elem.height();    
+            }
         },
 
         _incrementCounter: function(){

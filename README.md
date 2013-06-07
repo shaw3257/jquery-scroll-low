@@ -10,3 +10,6 @@ $(window).scrollLow({
     scrollCheckInterval: 200       //check scroll position every 200ms
 });
 ```
+
+Demo:
+http://jsfiddle.net/shaw3257/2ZQRV/1/

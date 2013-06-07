@@ -13,3 +13,6 @@ $(window).scrollLow({
 
 Demo:
 http://jsfiddle.net/shaw3257/2ZQRV/1/
+
+
+<iframe width="100%" height="300" src="http://jsfiddle.net/shaw3257/2ZQRV/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>

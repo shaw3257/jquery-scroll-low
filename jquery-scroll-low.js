@@ -17,6 +17,8 @@
     Plugin.prototype = {
         defaults: {
             scrollBuffer: 100,
+            scrollCheckInterval: 500,
+            throttleWait: 2000,
             callback : function(pageNum){
                 alert('Ajax call goes here');
             }
@@ -61,14 +63,14 @@
 
         init: function() {
             var root = this;
-            this.config = $.extend({}, this.defaults, this.options);
-            this.cb = this._throttle(root.config.callback, 1000, true);
+            root.config = $.extend({}, root.defaults, root.options);
+            root.cb = root._throttle(root.config.callback, root.config.throttleWait, true);
             setInterval(function(){
-                if(root._widthFromBottom() < 100){
+                if(root._widthFromBottom() < root.config.scrollBuffer){
                     root.cb.apply(root, [root.counter]);
                 }
-            }, 200);
-            return this;
+            }, root.config.scrollCheckInterval);
+            return root;
         }
     }
 

@@ -1,4 +1,4 @@
-simple-infinite-scroll
+jquery-scroll-low
 ======================
 
 Super simple and easy to use endless scroll plugin for jQuery.

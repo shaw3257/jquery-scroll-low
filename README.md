@@ -12,4 +12,4 @@ $(window).scrollLow({
 ```
 
 Demo:
-http://jsfiddle.net/shaw3257/2ZQRV/1/
+http://jsfiddle.net/shaw3257/2ZQRV

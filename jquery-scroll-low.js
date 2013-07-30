@@ -12,6 +12,7 @@
         this.$elem = $(elem);
         this.options = options;
         this.counter = 0;
+        this.pause = false;
     };
 
     Plugin.prototype = {
@@ -70,7 +71,7 @@
             root.config = $.extend({}, root.defaults, root.options);
             root.cb = root._throttle(root.config.callback, root.config.throttleWait, true);
             setInterval(function(){
-                if(root._widthFromBottom() < root.config.scrollBuffer){
+                if(root.pause === false && root._widthFromBottom() < root.config.scrollBuffer){
                     root.cb.apply(root, [root.counter]);
                 }
             }, root.config.scrollCheckInterval);

@@ -1,7 +1,7 @@
 jquery-scroll-low
 ======================
 
-Super simple and easy to use endless scroll plugin for jQuery.
+JQuery Infinite Scroll Plugin. Super Simple and easy to use.
 
 ```javascript
 $(window).scrollLow({
